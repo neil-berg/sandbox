@@ -20,8 +20,8 @@ export const fetchWeather = city => async (dispatch, getState) => {
 		dispatch(setSummary(summary));
 		dispatch(setTemperature(temperature));
 		dispatch(setPrecip(precip))
+		dispatch(setSuccess());
 	} catch (error) {
-		dispatch(setError())
+		dispatch(setError(error))
 	}
-	dispatch(setSuccess());
 }

@@ -2,8 +2,9 @@ export const setLoading = () => ({
 	type: 'SET_LOADING'
 });
 
-export const setError = () => ({
-	type: 'SET_ERROR'
+export const setError = (error) => ({
+	type: 'SET_ERROR',
+	error
 });
 
 export const setSuccess = () => ({

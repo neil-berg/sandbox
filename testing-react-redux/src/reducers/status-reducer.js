@@ -1,6 +1,6 @@
 export const statusInitialState = {
 	loading: false,
-	error: false,
+	error: null,
 	success: false
 }
 
@@ -17,14 +17,14 @@ export const statusReducer = (state = statusInitialState, action) => {
 			return {
 				...state,
 				loading: false,
-				error: true,
+				error: action.error,
 				success: false
 			}
 		case 'SET_SUCCESS':
 			return {
 				...state,
 				loading: false,
-				error: false,
+				error: null,
 				success: true
 			}
 		default:
