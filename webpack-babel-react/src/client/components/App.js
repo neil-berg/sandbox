@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
+import '../styles/layout.css';
+
 
 const name = 'Neil';
 
@@ -13,7 +17,7 @@ const App = () => {
 			<h1>Is this alive?</h1>
 			<h2>Hello?</h2>
 			<h3>what the fuck????</h3>
-			<h4>andddd</h4>
+			<MyHeader active>andddd</MyHeader>
 			<p>My name is {name}</p>
 			<p>The good job</p>
 			<p className="active">{name}</p>
@@ -24,5 +28,10 @@ const App = () => {
 		</div>
 	)
 };
+
+const MyHeader = styled.h4`
+	font-size: 3em;
+	color: ${props => props.active ? 'orange' : 'red'};
+`
 
 export default App;
